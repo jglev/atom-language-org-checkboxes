@@ -1,9 +1,12 @@
 {
-  "name": "language-todo-extra-words",
+  "name": "language-todo-extra-words-jacob",
   "version": "0.2.0",
   "description": "Extra words highlighting support in Atom",
   "keywords": [
-    "todo"
+    "todo",
+    "note",
+    "log",
+    "journal.md"
   ],
   "repository": "https://github.com/dkiyatkin/atom-language-todo-extra-words",
   "license": "MIT",
