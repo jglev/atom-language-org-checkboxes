@@ -1,16 +1,39 @@
-'scopeName': 'text.todo_extra'
-'name': 'org-todo Light'
+'scopeName': 'text.gfm-org-checkbox-coloring'
+'name': 'Org + Checkboxes'
 'injectionSelector': 'comment, text.plain'
+'fileTypes': [
+  # 'md',
+  # 'gfm',
+  'org',
+  'journal'
+]
 'patterns': [
+  # {include: 'source.gfm'}
+  ## {include: 'source.gfm.rmarkdown'}  # From language-rmarkdown package
+  # {include: 'text.md'}  # from language-markdown package
   {
-    'match': '(?<!\\w)@?(TODO|NEXT|RIGHT_NOW|WAITING|DONE)\\b'
-    'name': 'storage.type.class.${1:/downcase}'
+    'match': '^\\s*[\\-\\*\\+]\\s*\\[ {0,1}\\](?=\\s)'
+    'name': 'storage.type.class.checkbox-todo'
   }
   {
-    'captures':
-      '1':
-        'name': 'markup.underline.link.radar'
-    'match': '<(ra?dar:/(?:/problems?|)/(?:[&0-9]+))>'
-    'name': 'storage.type.class.radar'
+    'match': '^\\s*[\\-\\*\\+]\\s*\\[[Xx]\\] '
+    'name': 'storage.type.class.checkbox-done'
   }
+  {
+    'match': '^\\s*[\\-\\*\\+]\\s*\\[>\\] '
+    'name': 'storage.type.class.checkbox-next'
+  }
+  {
+    'match': '^\\s*[\\-\\*\\+]\\s*\\[<\\] '
+    'name': 'storage.type.class.checkbox-migrated'
+  }
+  {
+    'match': '^\\s*[\\-\\*\\+]\\s*\\[[/]\\] '
+    'name': 'storage.type.class.checkbox-right_now'
+  }
+  {
+    'match': '^\\s*[\\-\\*\\+]\\s*\\[[0Oo]\\] '
+    'name': 'storage.type.class.checkbox-waiting'
+  }
+  {include: 'source.org-mode'}
 ]

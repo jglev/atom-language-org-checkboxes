@@ -1,32 +1,38 @@
-.syntax--todo,
-.syntax--next,
-.syntax--right_now,
-.syntax--waiting,
-.syntax--done, {
+.syntax--checkbox-todo,
+.syntax--checkbox-next,
+.syntax--checkbox-migrated,
+.syntax--checkbox-right_now,
+.syntax--checkbox-waiting,
+.syntax--checkbox-done, {
   font-weight: bold;
-  // background-color: darken(@syntax-background-color, 5%);
+  background-color: darken(@syntax-background-color, 10%);
   font-family: monospace;
+  font-size: 1.1em;
   padding-left: 5px;
   padding-right: 5px;
   border-radius: 5px;
 }
 
-.syntax--todo {
+.syntax--checkbox-todo {
   color: red !important;
 }
 
-.syntax--next {
-  color: blue !important;
-}
-
-.syntax--right_now {
+.syntax--checkbox-right_now {
   color: lightgreen !important;
 }
 
-.syntax--waiting {
+.syntax--checkbox-next{
+  color: blue !important;
+}
+
+.syntax--checkbox-migrated{
+  color: mediumpurple !important;
+}
+
+.syntax--checkbox-waiting {
   color: orange !important;
 }
 
-.syntax--done {
+.syntax--checkbox-done {
   color: green !important;
 }
