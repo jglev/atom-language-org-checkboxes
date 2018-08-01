@@ -1,6 +1,15 @@
-# language-todo-extra-words package
+# org-checkbox-coloring package
 
-Adds coloring for `- [ ]`, `- [X]`, `- [>]`, `- [<]`, `- [/]`, and `- [O]`/`- [0]`/`- [o]` to org-mode in comments and text in Atom.
+Adds coloring for checkboxes to org-mode in comments and text in Atom.
+
+Checkbox coloring:
+
+`- []`, `- [ ]`: Todo
+`- [X]`, `- [x]`: Done
+`- [>]`: Next / Scheduled
+`- [<]`: Migrated
+`- [/]`: Right now / In progress
+`- [O]`, `- [0]`, `- [o]`: Waiting on someone else
 
 Also includes syntax highlighting for org-mode.
 

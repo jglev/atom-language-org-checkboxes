@@ -16,24 +16,32 @@
     'name': 'storage.type.class.checkbox-todo'
   }
   {
-    'match': '^\\s*[\\-\\*\\+]\\s*\\[[Xx]\\] '
+    'match': '^\\s*[\\-\\*\\+]\\s*\\[[Xx]\\](?=\\s)'
     'name': 'storage.type.class.checkbox-done'
   }
   {
-    'match': '^\\s*[\\-\\*\\+]\\s*\\[>\\] '
+    'match': '^\\s*[\\-\\*\\+]\\s*\\[>\\](?=\\s)'
     'name': 'storage.type.class.checkbox-next'
   }
   {
-    'match': '^\\s*[\\-\\*\\+]\\s*\\[<\\] '
+    'match': '^\\s*[\\-\\*\\+]\\s*\\[<\\](?=\\s)'
     'name': 'storage.type.class.checkbox-migrated'
   }
   {
-    'match': '^\\s*[\\-\\*\\+]\\s*\\[[/]\\] '
+    'match': '^\\s*[\\-\\*\\+]\\s*\\[[/]\\](?=\\s)'
     'name': 'storage.type.class.checkbox-right_now'
   }
   {
-    'match': '^\\s*[\\-\\*\\+]\\s*\\[[0Oo]\\] '
+    'match': '^\\s*[\\-\\*\\+]\\s*\\[[0Oo]\\](?=\\s)'
     'name': 'storage.type.class.checkbox-waiting'
+  }
+  {
+    'match': '(^\\s*[\\-\\*\\+]\\s*\\[-\\])\\s+(.*$)'
+    'captures':
+      '1':
+        'name': 'storage.type.class.checkbox-strikethrough'
+      '2':
+        'name': 'strikethrough-text'
   }
   {include: 'source.org-mode'}
 ]

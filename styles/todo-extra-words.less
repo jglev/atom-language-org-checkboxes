@@ -5,9 +5,9 @@
 .syntax--checkbox-waiting,
 .syntax--checkbox-done, {
   font-weight: bold;
-  background-color: darken(@syntax-background-color, 10%);
+  background-color: darken(@syntax-background-color, 5%);
   font-family: monospace;
-  font-size: 1.1em;
+  font-size: 1.05em;
   padding-left: 5px;
   padding-right: 5px;
   border-radius: 5px;
@@ -18,7 +18,7 @@
 }
 
 .syntax--checkbox-right_now {
-  color: lightgreen !important;
+  color: green !important;
 }
 
 .syntax--checkbox-next{
@@ -34,5 +34,13 @@
 }
 
 .syntax--checkbox-done {
-  color: green !important;
+  color: lightgreen !important;
+}
+
+.syntax--checkbox-strikethrough {
+  color: #82d882 !important;  // Slightly darker than lightgreen
+}
+
+.syntax--strikethrough-text {
+  text-decoration: line-through;
 }
