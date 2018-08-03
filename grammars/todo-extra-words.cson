@@ -12,8 +12,12 @@
   ## {include: 'source.gfm.rmarkdown'}  # From language-rmarkdown package
   # {include: 'text.md'}  # from language-markdown package
   {
-    'match': '^\\s*[\\-\\*\\+]\\s*\\[ {0,1}\\](?=\\s)'
+    'match': '^\\s*[\\-\\*\\+]\\s*\\[ \\](?=\\s)'
     'name': 'storage.type.class.checkbox-todo'
+  }
+  {
+    'match': '^\\s*[\\-\\*\\+]\\s*\\[\\](?=\\s)'
+    'name': 'storage.type.class.checkbox-malformed'
   }
   {
     'match': '^\\s*[\\-\\*\\+]\\s*\\[[Xx]\\](?=\\s)'
@@ -42,6 +46,16 @@
         'name': 'storage.type.class.checkbox-strikethrough'
       '2':
         'name': 'strikethrough-text'
+  }
+  {
+    'match': '^\\s*[\\-\\*\\+]\\s*[Oo0](?=\\s)'
+    'name': 'event'
+  }
+  # This should come last, to catch any remaining bullets
+  # (Alternatively, we could use a negative lookahead here)
+  {
+    'match': '^\\s*[\\-\\+]\\s*'  # Add '\\*' for markdown support.
+    'name': 'bullet'
   }
   {include: 'source.org-mode'}
 ]

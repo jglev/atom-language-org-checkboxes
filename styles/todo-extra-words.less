@@ -1,11 +1,14 @@
 .syntax--checkbox-todo,
+.syntax--checkbox-malformed,
 .syntax--checkbox-next,
 .syntax--checkbox-migrated,
 .syntax--checkbox-right_now,
 .syntax--checkbox-waiting,
-.syntax--checkbox-done, {
+.syntax--checkbox-done,
+.syntax--checkbox-strikethrough,
+.syntax--bullet,
+.syntax--event {
   font-weight: bold;
-  background-color: darken(@syntax-background-color, 5%);
   font-family: monospace;
   font-size: 1.05em;
   padding-left: 5px;
@@ -13,12 +16,27 @@
   border-radius: 5px;
 }
 
+.syntax--checkbox-todo,
+.syntax--checkbox-next,
+.syntax--checkbox-migrated,
+.syntax--checkbox-right_now,
+.syntax--checkbox-waiting,
+.syntax--checkbox-done,
+.syntax--checkbox-strikethrough,
+.syntax--event {
+  background-color: fadeout(@syntax-background-color, 40%);
+}
+
 .syntax--checkbox-todo {
   color: red !important;
 }
 
+.syntax--checkbox-malformed {
+  color: fuchsia !important;
+}
+
 .syntax--checkbox-right_now {
-  color: green !important;
+  color: blue !important;
 }
 
 .syntax--checkbox-next{
@@ -43,4 +61,5 @@
 
 .syntax--strikethrough-text {
   text-decoration: line-through;
+  // text-decoration-color: #82d882;
 }
