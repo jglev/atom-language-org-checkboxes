@@ -48,6 +48,14 @@
         'name': 'strikethrough-text'
   }
   {
+    'match': '(^\\s*[\\-\\*\\+]\\s*\\[7\\])\\s+.*(\\(.*?\\))\\s+$'
+    'captures':
+      '1':
+        'name': 'storage.type.class.checkbox-done'
+      '2':
+        'name': 'storage.type.class.checkbox-done'
+  }
+  {
     'match': '^\\s*[\\-\\*\\+]\\s*[Oo0](?=\\s)'
     'name': 'event'
   }
