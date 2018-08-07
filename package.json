@@ -1,12 +1,15 @@
 {
   "name": "language-markdown-todo-coloring",
   "version": "0.2.0",
-  "description": "Adds coloring for `- [ ]`, `- [X]`, `- [>]`, `- [<]`, `- [/]`, and `- [O]`/`- [0]`/`- [o]` to org-mode files",
+  "description": "Adds coloring for bullet-journal-style checkbox todo items to org-mode files",
   "keywords": [
     "todo",
-    "markdown",
-    "github-flavored markdown",
-    "gfm",
+    "org-mode",
+    "bullet journal",
+    "bullet",
+    "rapid logging",
+    "syntax highlighting",
+    "highlighting",
     "note",
     "log",
     "journal"

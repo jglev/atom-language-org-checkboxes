@@ -6,6 +6,7 @@ Checkbox coloring:
 
 `- []`, `- [ ]`: Todo
 `- [X]`, `- [x]`: Done
+`- [7]`: Done, but on a different day (Date or reference goes in parentheses at the end of the line)
 `- [>]`: Next / Scheduled
 `- [<]`: Migrated
 `- [/]`: Right now / In progress
