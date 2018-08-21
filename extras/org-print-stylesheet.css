@@ -1,0 +1,160 @@
+/*
+  Amended from https://gist.github.com/killercup/5917178
+  (listed as CC0 at https://gist.github.com/killercup/5917178#gistcomment-1924106)
+*/
+
+body{
+  margin: 2.5em auto;
+  max-width: 650px;
+  line-height: 1.6;
+  font-size: 1.125em;
+  color: #444;
+  padding: 0 .625em;
+}
+
+h1, h2, h3 {
+  line-height:1.2
+}
+
+.syntax--checkbox-todo,
+.syntax--checkbox-malformed,
+.syntax--checkbox-next,
+.syntax--checkbox-migrated,
+.syntax--checkbox-right_now,
+.syntax--checkbox-waiting,
+.syntax--checkbox-done,
+.syntax--checkbox-strikethrough,
+.syntax--bullet,
+.syntax--event {
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 1.05em;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 5px;
+}
+
+.syntax--checkbox-todo,
+.syntax--checkbox-next,
+.syntax--checkbox-migrated,
+.syntax--checkbox-right_now,
+.syntax--checkbox-waiting,
+.syntax--checkbox-done,
+.syntax--checkbox-strikethrough,
+.syntax--event {
+  background-color: fadeout(@syntax-background-color, 40%);
+}
+
+.syntax--checkbox-todo {
+  color: red !important;
+}
+
+.syntax--checkbox-malformed {
+  color: fuchsia !important;
+}
+
+.syntax--checkbox-right_now {
+  color: blue !important;
+}
+
+.syntax--checkbox-next{
+  color: blue !important;
+}
+
+.syntax--checkbox-migrated{
+  color: mediumpurple !important;
+}
+
+.syntax--checkbox-waiting {
+  color: orange !important;
+}
+
+.syntax--checkbox-done {
+  color: lightgreen !important;
+}
+
+.syntax--checkbox-strikethrough {
+  color: #82d882 !important;  // Slightly darker than lightgreen
+}
+
+.syntax--strikethrough-text {
+  text-decoration: line-through;
+  // text-decoration-color: #82d882;
+}
+
+@media print {
+  * {
+    background: transparent !important;
+    color: black !important;
+    filter: none !important;
+    -ms-filter: none !important;
+  }
+
+  body {
+    font-size: 14pt;
+    max-width: 80%;
+  }
+
+  a, a:visited {
+    text-decoration: underline;
+  }
+
+  hr {
+    height: 1px;
+    border: 0;
+    border-bottom: 1px solid black;
+  }
+
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
+    content: "";
+  }
+
+  pre, blockquote {
+    border: 1px solid #999;
+    padding-right: 1em;
+    page-break-inside: avoid;
+  }
+
+  tr, img {
+    page-break-inside: avoid;
+  }
+
+  img {
+    max-width: 100% !important;
+  }
+
+  @page :left {
+    margin: 15mm 20mm 15mm 10mm;
+  }
+
+  @page :right {
+    margin: 15mm 10mm 15mm 20mm;
+  }
+
+  p, h2, h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h1 {
+    page-break-before: always;
+  }
+
+  h2, h3 {
+    page-break-after: avoid;
+  }
+
+  @page {
+    @bottom-right {
+      content: counter(page) " of " counter(pages);
+    }
+  }
+}

@@ -1,0 +1,25 @@
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+  $( document ).ready(function() {
+    function replaceText(){
+      $(this).html(function(){
+        return $(this).html()
+          .replace(/(\s*\[ \])(?=\s)/g, '<span class="syntax--checkbox-todo">$1</span>')
+          .replace(/(\s*\[\])(?=\s)/g, '<span class="syntax--checkbox-malformed">$1</span>')
+          .replace(/(\s*\[[Xx]\])(?=\s)/g, '<span class="syntax--checkbox-done">$1</span>')
+          .replace(/(\s*\[&gt;\])(?=\s)/g, '<span class="syntax--checkbox-next">$1</span>')
+          .replace(/(\s*\[&lt;\])(?=\s)/g, '<span class="syntax--checkbox-migrated">$1</span>')
+          .replace(/(\s*\[[/]\])(?=\s)/g, '<span class="syntax--checkbox-right_now">$1</span>')
+          .replace(/(\s*\[[Oo]\])(?=\s)/g, '<span class="syntax--checkbox-waiting">$1</span>')
+          .replace(/(\s*\[-])\s+(.*)/g, '<span class="syntax--checkbox-strikethrough">$1</span><span class="syntax--strikethrough-text">$2</span>')
+          .replace(/(\s*\[[Vv]\])(\s+.*)(\(.*\))/g, '<span class="syntax--checkbox-done">$1</span>$2<span class="syntax--checkbox-done">$3</span>')
+          .replace(/(^[Oo])(?=\s)/g, '<span class="syntax--event">$1</span>')
+          ;
+      });
+    }
+
+    $( "body" ).find("li").each(replaceText);
+    $( "body" ).find("li li").each(replaceText);
+    $( "body" ).find("li p").each(replaceText);
+  });
+</script>

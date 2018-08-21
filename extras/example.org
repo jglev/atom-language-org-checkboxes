@@ -1,0 +1,15 @@
+* 2018-08-03 Friday
+
+  - Bullet note.
+    - Sub-note.
+
+    Sub-note, indented (and thus foldable in Atom).
+
+  - [ ] Todo
+  - [/] Right now / in-progress
+  - [X] Done
+  - [V] Done, but on a different day (Date / reference)
+  - [>] Next (or scheduled)
+  - [<] Migrated
+  - [-] Cancelled
+  - [O] Waiting on someone else

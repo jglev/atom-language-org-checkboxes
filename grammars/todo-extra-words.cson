@@ -36,7 +36,7 @@
     'name': 'storage.type.class.checkbox-right_now'
   }
   {
-    'match': '^\\s*[\\-\\*\\+]\\s*\\[[0Oo]\\](?=\\s)'
+    'match': '^\\s*[\\-\\*\\+]\\s*\\[[Oo]\\](?=\\s)'
     'name': 'storage.type.class.checkbox-waiting'
   }
   {
@@ -48,7 +48,7 @@
         'name': 'strikethrough-text'
   }
   {
-    'match': '(^\\s*[\\-\\*\\+]\\s*\\[7\\])\\s+.*(\\(.*?\\))\\s+$'
+    'match': '(^\\s*[\\-\\*\\+]\\s*\\[[Vv]\\])\\s+.*(\\(.*?\\))\\s+$'
     'captures':
       '1':
         'name': 'storage.type.class.checkbox-done'
@@ -56,7 +56,7 @@
         'name': 'storage.type.class.checkbox-done'
   }
   {
-    'match': '^\\s*[\\-\\*\\+]\\s*[Oo0](?=\\s)'
+    'match': '^\\s*[\\-\\*\\+]\\s*[Oo](?=\\s)'
     'name': 'event'
   }
   # This should come last, to catch any remaining bullets
