@@ -2,19 +2,19 @@
 
 ## Description
 
-This grammar for the [Atom text editor](https://atom.io/) Adds coloring for checkboxes to org-mode in comments and text in Atom.
+This grammar for the [Atom text editor](https://atom.io/) adds coloring for unordered list checkboxes in `org-mode` text. This facilitates creating simple [Bullet Journal](http://bulletjournal.com/) files using []`org-mode` syntax](http://ergoemacs.org/emacs/emacs_org_markup.html).
 
 The package is written by [Jacob Levernier](https://adunumdatum.org), and is based on Dmitriy Kiyatkin's [language-todo-extra-words](https://github.com/dkiyatkin/atom-language-todo-extra-words).
 
 It highlights the following:
 
-`- []`, `- [ ]`: Todo
-`- [X]`, `- [x]`: Done
-`- [7]`: Done, but on a different day (Date or reference goes in parentheses at the end of the line)
-`- [>]`: Next / Scheduled
-`- [<]`: Migrated
-`- [/]`: Right now / In progress  
-`- [O]`, `- [0]`, `- [o]`: Waiting on someone else
+- `- []`, `- [ ]`: Todo
+- `- [X]`, `- [x]`: Done
+- `- [7]`: Done, but on a different day (Date or reference goes in parentheses at the end of the line)
+- `- [>]`: Next / Scheduled
+- `- [<]`: Migrated
+- `- [/]`: Right now / In progress
+- `- [O]`, `- [0]`, `- [o]`: Waiting on someone else
 
 ![Screenshot of org-syntax coloring](extras/org-coloring-screenshot.png)
 
