@@ -1,6 +1,6 @@
 {
   "name": "language-org-checkboxes",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "Adds coloring for bullet-journal-style checkbox items to org-mode files",
   "keywords": [
     "todo",
