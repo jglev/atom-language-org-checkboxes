@@ -13,7 +13,7 @@ It highlights the following:
 `- [7]`: Done, but on a different day (Date or reference goes in parentheses at the end of the line)
 `- [>]`: Next / Scheduled
 `- [<]`: Migrated
-`- [/]`: Right now / In progress
+`- [/]`: Right now / In progress  
 `- [O]`, `- [0]`, `- [o]`: Waiting on someone else
 
 ![Screenshot of org-syntax coloring](extras/org-coloring-screenshot.png)
