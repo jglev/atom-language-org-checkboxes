@@ -14,7 +14,7 @@
     "log",
     "journal"
   ],
-  "repository": "https://github.com/dkiyatkin/atom-language-todo-extra-words",
+  "repository": "https://github.com/publicus/atom-language-org-checkboxes",
   "license": "MIT",
   "engines": {
     "atom": "*",
